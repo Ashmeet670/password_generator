@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 :root {
-    --primary:#03AED2;
-    --secondary: #68D2E8    ;
+    --primary: #03AED2;
+    --secondary: #68D2E8;
     --primaryText: black;
     --navShadow: rgb(225, 225, 225);
     --accent: rgb(0, 174, 255);
@@ -15,18 +15,18 @@
     --loginText: black;
 }
 
-body{
+body {
     color: var(--primaryText);
     background-color: var(--primary);
     font-family: "Fredoka", serif;
 }
 
-#passwordOutput{
+#passwordOutput {
     background-color: var(--secondary);
-    min-width:350px;
+    min-width: 350px;
     width: fit-content;
     font-family: "Iceland", serif;
-    font-size: clamp(25px,7vw,30px);
+    font-size: clamp(25px, 7vw, 30px);
 }
 
 .checkbox {
@@ -35,4 +35,11 @@ body{
     width: 1em;
     aspect-ratio: 1/1;
     cursor: pointer;
+}
+
+.chrNum{
+    font-family: "Iceland", serif;
+    font-size: clamp(15px, 4vw, 23px);
+    background-color: var(--secondary);
+    width: fit-content;
 }
