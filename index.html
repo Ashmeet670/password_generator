@@ -30,7 +30,7 @@
 
         <div id="passwordOutput" class="mx-auto py-1 px-4 rounded-4 mt-5 text-center">
             &nbsp;
-            
+
         </div>
 
         <!-- <div class="checkbox" onclick="checkBox(this)" aria-state="off"></div> -->
@@ -42,16 +42,32 @@
             <div class="fs-2">Settings</div>
             <hr class="mb-5">
 
-            <div class=" d-flex align-items-center justify-content-center ">
-                <text class="fs-5 mx-3">Length</text> 
-                <div class="d-flex justify-content-center chrNum mx-3 rounded-2">
-                    <div class="p-2 py-1 length" onclick="lengthChange('minus')">-</div>
-                    <div id="lengthShow" class="p-2 py-1">08</div>
-                    <div class="p-2 py-1 length" onclick="lengthChange('add')">+</div>
+            <!-- length -->
+            <div class=" d-flex align-items-center justify-content-center">
+                <div class="d-flex align-items-center m-4">
+                    <text class="fs-5 mx-3">Length</text>
+                    <div class="d-flex justify-content-center chrNum mx-3 rounded-2">
+                        <div class="p-2 py-1 length" onclick="lengthChange('minus')">-</div>
+                        <div id="lengthShow" class="p-2 py-1">08</div>
+                        <div class="p-2 py-1 length" onclick="lengthChange('add')">+</div>
+                    </div>
                 </div>
             </div>
 
-            
+            <!-- Include -->
+            <div class=" d-flex align-items-center justify-content-center">
+                <div class="d-flex align-items-center ">
+                    <text class="fs-5 mx-3">Lowercase</text>
+                    <div class="checkbox checkboxOn" onclick="includeFunc(this,'upper')" aria-state="on"> </div>
+                    <div class="checkbox checkboxOn" onclick="includeFunc(this,'lower')" aria-state="on"> </div>
+                    <div class="checkbox checkboxOn" onclick="includeFunc(this,'num')" aria-state="on"> </div>
+                    <div class="checkbox checkboxOn" onclick="includeFunc(this,'special')" aria-state="on"> </div>
+                </div>
+            </div>
+
+
+
+
         </div>
 
 
@@ -59,15 +75,16 @@
     </body>
 
 
-   <script src="app.js"></script> 
+    <script src="app.js"></script>
 
 
-        <!-- bootstrap JS-->
+    <!-- bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 
-        <!-- bootstrap poppers (dropdowns,popover etc.) -->
+    <!-- bootstrap poppers (dropdowns,popover etc.) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

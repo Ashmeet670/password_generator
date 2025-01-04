@@ -6,13 +6,9 @@
     --secondary: #68D2E8;
     --primaryText: black;
     --navShadow: rgb(225, 225, 225);
-    --accent: rgb(0, 174, 255);
-    --navNotActive: rgb(100, 100, 100);
-    --gold: rgb(255, 221, 0);
     --silver: rgb(210, 210, 210);
-    --normalBadge: rgb(255, 179, 120);
-    --badgeText: black;
-    --loginText: black;
+    --checkboxOn: rgb(68, 255, 0);
+
 }
 
 body {
@@ -32,11 +28,15 @@ body {
 }
 
 .checkbox {
-    background-color: var(--primary);
-    border: 3px solid var(--primaryText);
-    width: 1em;
+    background-color: var(--silver);
+    border: 3px solid black;
+    width: 1.2em;
     aspect-ratio: 1/1;
     cursor: pointer;
+}
+
+.checkboxOn {
+    background-color: var(--checkboxOn);
 }
 
 .chrNum{

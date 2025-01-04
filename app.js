@@ -14,25 +14,39 @@ var userSpecial = true;
 var length = 8;
 var pronouceable = true;
 
-
-function checkBox() {
-    this.getAttribute("aria-state")
+const include = {
+    "upper": useUpper,
+    "lower": useLower,
+    "num": useNum,
+    "special": userSpecial,
 }
 
 
+
 function lengthChange(action) {
-    
-    if(length > 1 && length < 20){
+
+    if (length > 1 && length < 20) {
         action == "add" ? length += 1 : length -= 1;
-        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+        length < 10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
     }
-    else if(length == 1){
+    else if (length == 1) {
         action == "add" ? length += 1 : null;
-        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+        length < 10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
     }
-    else if(length == 20){
+    else if (length == 20) {
         action == "add" ? null : length -= 1;
-        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+        length < 10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
     }
-    
+
+}
+
+function includeFunc(box,item) {
+
+    box.getAttribute("aria-state") == "on" ? box.setAttribute("aria-state","off")  : box.setAttribute("aria-state","on")
+
+    box.getAttribute("aria-state") == "on" ? box.classList.add("checkboxOn")  : box.classList.remove("checkboxOn")
+
+
+    box.getAttribute("aria-state") == "on" ? include[item] = true : include[item] = false;
+    console.log(include[item])
 }
