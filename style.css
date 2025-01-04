@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 :root {
     --primary:#03AED2;
@@ -17,12 +18,21 @@
 body{
     color: var(--primaryText);
     background-color: var(--primary);
+    font-family: "Fredoka", serif;
 }
 
 #passwordOutput{
     background-color: var(--secondary);
-    min-width:300px;
+    min-width:350px;
     width: fit-content;
     font-family: "Iceland", serif;
     font-size: clamp(25px,7vw,30px);
+}
+
+.checkbox {
+    background-color: var(--primary);
+    border: 3px solid var(--primaryText);
+    width: 1em;
+    aspect-ratio: 1/1;
+    cursor: pointer;
 }

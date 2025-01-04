@@ -4,6 +4,17 @@ const uppercaseAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'
 
 const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', " "];
 
-const symbols = ['!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '_', '.',];
+const specialChr = ['!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '_', '.',];
 
 
+var useUpper = true;
+var useLower = true;
+var useNum = true;
+var userSpecial = true;
+var lenght = 8;
+var pronouceable = true;
+
+
+function checkBox(this){
+    this.getAttribute("aria-state")
+}
