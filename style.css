@@ -19,6 +19,8 @@ body {
     color: var(--primaryText);
     background-color: var(--primary);
     font-family: "Fredoka", serif;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #passwordOutput {
@@ -42,4 +44,9 @@ body {
     font-size: clamp(15px, 4vw, 23px);
     background-color: var(--secondary);
     width: fit-content;
+
+}
+
+.length:hover{
+    cursor: pointer;
 }

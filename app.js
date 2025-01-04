@@ -11,10 +11,28 @@ var useUpper = true;
 var useLower = true;
 var useNum = true;
 var userSpecial = true;
-var lenght = 8;
+var length = 8;
 var pronouceable = true;
 
 
-function checkBox(this){
+function checkBox() {
     this.getAttribute("aria-state")
+}
+
+
+function lengthChange(action) {
+    
+    if(length > 1 && length < 20){
+        action == "add" ? length += 1 : length -= 1;
+        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+    }
+    else if(length == 1){
+        action == "add" ? length += 1 : null;
+        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+    }
+    else if(length == 20){
+        action == "add" ? null : length -= 1;
+        length<10 ? document.getElementById("lengthShow").innerHTML = `0${length}` : document.getElementById("lengthShow").innerHTML = length
+    }
+    
 }
