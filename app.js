@@ -7,21 +7,24 @@ const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', " "];
 const specialChr = ['!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '_', '.',];
 
 
-var useUpper = true;
-var useLower = true;
-var useNum = true;
-var userSpecial = true;
-var length = 8;
-var pronouceable = true;
 
-const include = {
-    "upper": useUpper,
-    "lower": useLower,
-    "num": useNum,
-    "special": userSpecial,
+var length = 8;
+var remembeer = true;
+
+var usable = [lowercaseAlphabet, uppercaseAlphabet, numbers, specialChr]
+
+var password = ""
+
+function generatePassword() {
+
 }
 
-
+const include = {
+    "upper": uppercaseAlphabet,
+    "lower": lowercaseAlphabet,
+    "num": numbers,
+    "special": specialChr,
+}
 
 function lengthChange(action, btn) {
 
@@ -61,5 +64,7 @@ function includeFunc(box, item) {
         }, 260);
     }
 
-    box.getAttribute("aria-state") == "on" ? include[item] = true : include[item] = false;
+    box.getAttribute("aria-state") == "on" ? usable.push(include[item]) : usable.splice(usable.indexOf(include[item]), 1);
+    console.log(usable)
 }
+
