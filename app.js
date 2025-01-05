@@ -23,7 +23,8 @@ const include = {
 
 
 
-function lengthChange(action) {
+function lengthChange(action, btn) {
+
 
     if (length > 1 && length < 20) {
         action == "add" ? length += 1 : length -= 1;
@@ -50,14 +51,14 @@ function includeFunc(box, item) {
         box.classList.add("checkboxAnim")
         setTimeout(() => {
             box.classList.remove("checkboxAnim")
-        }, 400);
+        }, 260);
     }
     else {
         box.classList.remove("checkboxOn")
         box.classList.add("checkboxAnim")
         setTimeout(() => {
             box.classList.remove("checkboxAnim")
-        }, 400);
+        }, 260);
     }
 
     box.getAttribute("aria-state") == "on" ? include[item] = true : include[item] = false;

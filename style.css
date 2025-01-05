@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
 
 :root {
     --primary: rgb(235, 235, 235);
@@ -10,10 +10,17 @@
 
 }
 
+.nav {
+    background-color: var(--secondary);
+    box-shadow: 2px 2px 5px var(--shadow);
+    font-size: clamp(25px, 5vw, 30px);
+    font-family: "Tomorrow", serif;
+}
+
 body {
     color: var(--primaryText);
     background-color: var(--primary);
-    font-family: "Fredoka", serif;
+    font-family: "Tomorrow", serif;
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
@@ -55,6 +62,7 @@ body {
 .checkboxAnim {
     animation: checkboxAnim 0.25s 0s forwards;
 }
+
 @keyframes checkboxAnim {
     50% {
         scale: 0.7;
@@ -63,4 +71,21 @@ body {
     100% {
         scale: 1;
     }
+}
+
+.settings {
+    position: absolute;
+    bottom: 4vh;
+    left: 2vh;
+    background-color: var(--secondary);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10%;
+    box-shadow: 0px 0px 2px 2px var(--primaryText);
+    cursor: pointer !important;
+
+}
+
+.settings>svg {
+    fill: var(--primaryText);
 }
