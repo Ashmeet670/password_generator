@@ -6,7 +6,8 @@
     --secondary: #ffffff;
     --primaryText: black;
     --shadow: rgb(225, 225, 225);
-    --checkboxOn: rgb(0, 200, 255);
+    --accent: rgb(0, 200, 255);
+    --accentShadow: rgb(0, 135, 175);
 
 }
 
@@ -36,10 +37,10 @@ body {
 }
 
 #generateBtn {
-    background-color: var(--secondary);
+    background-color: var(--accent);
     width: fit-content;
     font-size: clamp(13px, 4vw, 17px);
-    box-shadow: 0px 3px 3px var(--shadow);
+    box-shadow: 0px 2px 2px var(--accentShadow);
     cursor: pointer;
 }
 
@@ -54,7 +55,7 @@ body {
 }
 
 .checkboxOn {
-    background-color: var(--checkboxOn);
+    background-color: var(--accent);
 }
 
 .chrNum {
