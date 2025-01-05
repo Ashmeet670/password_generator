@@ -89,3 +89,7 @@ body {
 .settings>svg {
     fill: var(--primaryText);
 }
+
+.themeBtn{
+    cursor: pointer ;
+}
