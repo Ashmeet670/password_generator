@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 
 :root {
-    --primary: #03AED2;
-    --secondary: #68D2E8;
+    --primary: rgb(235, 235, 235);
+    --secondary: #ffffff;
     --primaryText: black;
-    --navShadow: rgb(225, 225, 225);
-    --silver: rgb(210, 210, 210);
-    --checkboxOn: rgb(68, 255, 0);
+    --shadow: rgb(225, 225, 225);
+    --checkboxOn: rgb(0, 200, 255);
 
 }
 
@@ -17,6 +16,7 @@ body {
     font-family: "Fredoka", serif;
     -webkit-user-select: none;
     user-select: none;
+    cursor: default;
 }
 
 #passwordOutput {
@@ -28,7 +28,7 @@ body {
 }
 
 .checkbox {
-    background-color: var(--silver);
+    background-color: var(--primary);
     border: 3px solid black;
     width: 1.2em;
     aspect-ratio: 1/1;
