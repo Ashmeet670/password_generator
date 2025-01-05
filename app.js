@@ -40,13 +40,25 @@ function lengthChange(action) {
 
 }
 
-function includeFunc(box,item) {
+function includeFunc(box, item) {
 
-    box.getAttribute("aria-state") == "on" ? box.setAttribute("aria-state","off")  : box.setAttribute("aria-state","on")
+    box.getAttribute("aria-state") == "on" ? box.setAttribute("aria-state", "off") : box.setAttribute("aria-state", "on")
 
-    box.getAttribute("aria-state") == "on" ? box.classList.add("checkboxOn")  : box.classList.remove("checkboxOn")
 
+    if (box.getAttribute("aria-state") == "on") {
+        box.classList.add("checkboxOn")
+        box.classList.add("checkboxAnim")
+        setTimeout(() => {
+            box.classList.remove("checkboxAnim")
+        }, 400);
+    }
+    else {
+        box.classList.remove("checkboxOn")
+        box.classList.add("checkboxAnim")
+        setTimeout(() => {
+            box.classList.remove("checkboxAnim")
+        }, 400);
+    }
 
     box.getAttribute("aria-state") == "on" ? include[item] = true : include[item] = false;
-    console.log(include[item])
 }

@@ -39,7 +39,7 @@ body {
     background-color: var(--checkboxOn);
 }
 
-.chrNum{
+.chrNum {
     font-family: "Iceland", serif;
     font-size: clamp(15px, 4vw, 23px);
     background-color: var(--secondary);
@@ -47,6 +47,20 @@ body {
 
 }
 
-.length:hover{
+.length:hover {
     cursor: pointer;
+}
+
+
+.checkboxAnim {
+    animation: checkboxAnim 0.25s 0s forwards;
+}
+@keyframes checkboxAnim {
+    50% {
+        scale: 0.7;
+    }
+
+    100% {
+        scale: 1;
+    }
 }
