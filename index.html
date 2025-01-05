@@ -24,6 +24,10 @@
 
 
     <body>
+        
+        <div class="nav d-flex justify-content-center align-items-center py-3">
+            <text>Password Generator</text>
+        </div>
 
         <div style="height: 55px;"></div>
 
@@ -39,28 +43,40 @@
 
         <div class="container mt-5 text-center py-4">
 
-            <div class="fs-2">Settings</div>
-            <hr class="mb-5">
+            <div class="fs-2">Customise</div>
+            <hr class="mb-5 mx-auto" style="width: 80%;">
 
             <!-- length -->
             <div class=" d-flex align-items-center justify-content-center">
                 <div class="d-flex align-items-center m-4">
                     <text class="fs-5 mx-3">Length</text>
                     <div class="d-flex justify-content-center chrNum mx-3 rounded-2">
-                        <div class="p-2 py-1 length" onclick="lengthChange('minus')">-</div>
+                        <div class="p-2 py-1 length " onclick="lengthChange('minus',this)">-</div>
                         <div id="lengthShow" class="p-2 py-1">08</div>
-                        <div class="p-2 py-1 length" onclick="lengthChange('add')">+</div>
+                        <div class="p-2 py-1 length" onclick="lengthChange('add',this)">+</div>
                     </div>
                 </div>
             </div>
 
             <!-- Include -->
-            <div class=" d-flex align-items-center justify-content-center">
-                <div class="d-flex align-items-center ">
-                    <text class="fs-5 mx-3">Lowercase</text>
+            <div class="d-sm-flex align-items-center justify-content-evenly flex-sm-wrap">
+                <div class="d-flex align-items-center m-4 justify-content-center">
+                    <text class="fs-5 mx-3">Uppercase</text>
                     <div class="checkbox checkboxOn" onclick="includeFunc(this,'upper')" aria-state="on"> </div>
+                </div>
+
+                <div class="d-flex align-items-center m-4 justify-content-center">
+                    <text class="fs-5 mx-3">Lowercase</text>
                     <div class="checkbox checkboxOn" onclick="includeFunc(this,'lower')" aria-state="on"> </div>
+                </div>
+
+                <div class="d-flex align-items-center m-4 justify-content-center">
+                    <text class="fs-5 mx-3">Number</text>
                     <div class="checkbox checkboxOn" onclick="includeFunc(this,'num')" aria-state="on"> </div>
+                </div>
+
+                <div class="d-flex align-items-center m-4 justify-content-center">
+                    <text class="fs-5 mx-3">Symbols (%,#,$)</text>
                     <div class="checkbox checkboxOn" onclick="includeFunc(this,'special')" aria-state="on"> </div>
                 </div>
             </div>
