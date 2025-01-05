@@ -29,7 +29,7 @@ body {
 
 #passwordOutput {
     background-color: var(--secondary);
-    min-width: 350px;
+    min-width: 400px;
     width: fit-content;
     font-family: "Iceland", serif;
     font-size: clamp(25px, 7vw, 30px);
