@@ -67,7 +67,6 @@ function generatePassword() {
 }
 
 
-
 const include = {
     "upper": uppercaseAlphabet,
     "lower": lowercaseAlphabet,

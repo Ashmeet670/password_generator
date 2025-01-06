@@ -130,7 +130,6 @@ body {
     }
 }
 
-
 @media only screen and (max-width:450px) {
     #passwordOutput {
         min-width: 85vw;
