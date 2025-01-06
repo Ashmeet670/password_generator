@@ -129,3 +129,17 @@ body {
         scale: 1;
     }
 }
+
+
+@media only screen and (max-width:450px) {
+    #passwordOutput {
+        min-width: 85vw;
+        font-size: clamp(20px, 5vw, 26px);
+
+    }
+
+    .chrNum {
+        font-size: clamp(18px, 5vw, 25px);
+
+    }
+}
