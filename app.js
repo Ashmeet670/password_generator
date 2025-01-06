@@ -6,28 +6,64 @@ const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 const specialChr = ['!', '@', '#', '$', '%', '&', '-', '_'];
 
+const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'R', 'I', 'O', 'U'];
+
+const consonants = [
+    "B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z",
+    "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"
+]
+
 
 
 var passLength = 8;
+var maxSpeNum = 3;
 var remember = true;
 
-var usable = [lowercaseAlphabet, uppercaseAlphabet, numbers, specialChr]
+var usable = [lowercaseAlphabet, uppercaseAlphabet, numbers]
 
 var password = ""
 
 function generatePassword() {
-    password = ""
-    document.getElementById("passwordOutput").innerHTML = password
-    current = 0
 
-    while (current < passLength) {
-        list = Math.round(Math.random() * (usable.length - 1))
-        chr = Math.round(Math.random() * ((usable[list]).length - 1))
-        password += usable[list][chr]
-        current++
+    if (usable[0] != undefined) {
+
+        password = ""
+        document.getElementById("passwordOutput").innerHTML = password
+        current = 0
+        chance = 1 // 0- consonant, 1-vowel
+        speNum = 0
+
+        if (usable.indexOf(lowercaseAlphabet) < 0 && usable.indexOf(uppercaseAlphabet) < 0) {
+            maxSpeNum = 21
+        }
+        else {
+            maxSpeNum = 3
+        }
+
+
+        while (current < passLength) {
+            list = Math.round(Math.random() * (usable.length - 1))
+            chr = Math.round(Math.random() * ((usable[list]).length - 1))
+
+            if ((usable[list] == numbers && speNum < maxSpeNum) || (usable[list] == specialChr && speNum < maxSpeNum) || (usable[list] == lowercaseAlphabet) || (usable[list] == uppercaseAlphabet)) {
+                password += usable[list][chr]
+                current++
+            }
+
+            if (usable[list] == numbers || usable[list] == specialChr) {
+                speNum++
+            }
+
+        }
+
+        document.getElementById("passwordOutput").innerHTML = password
+    }
+    else {
+
+        document.getElementById("passwordOutput").innerHTML = "Choose 1 or more customisations :/"
+
     }
 
-    document.getElementById("passwordOutput").innerHTML = password
 }
 
 
@@ -100,3 +136,10 @@ function rememberToggle(box) {
     }
 }
 
+
+function buttonClick(btn) {
+    btn.classList.add('buttonClick')
+    setTimeout(() => {
+        btn.classList.remove('buttonClick')
+    }, 250);
+}
