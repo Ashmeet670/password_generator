@@ -134,8 +134,8 @@ body {
 @media only screen and (max-width:450px) {
     #passwordOutput {
         min-width: 85vw;
-        font-size: clamp(20px, 5vw, 26px);
-
+        min-height: 50px;
+        font-size: clamp(20px, 7vw, 26px);
     }
 
     .chrNum {
